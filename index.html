@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Bug Hunting Game 🎯</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="game-container">
+        <!-- Header Game -->
+        <header class="game-header">
+            <h1>🎯 Code Bug Hunter</h1>
+            <p>Temukan kesalahan kode (bug) pada kotak di bawah dan tuliskan perbaikannya!</p>
+        </header>
+
+        <!-- Informasi Level & Skor -->
+        <div class="dashboard-box">
+            <div class="info-card">
+                <span class="info-label">Level</span>
+                <span class="info-value" id="current-level">1/4</span>
+            </div>
+            <div class="info-card">
+                <span class="info-label">Bahasa / Topik</span>
+                <span class="info-value" id="code-language">HTML</span>
+            </div>
+            <div class="info-card">
+                <span class="info-label">Skor</span>
+                <span class="info-value" id="current-score">0</span>
+            </div>
+        </div>
+
+        <!-- Deskripsi Soal / Petunjuk -->
+        <div class="clue-box">
+            <strong>Petunjuk Masalah:</strong> <span id="bug-clue">Memuat deskripsi...</span>
+        </div>
+
+        <!-- Editor Mini (Tempat Kode Ber-bug Ditampilkan) -->
+        <div class="editor-container">
+            <div class="editor-header">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+                <span class="file-name">source_code.js</span>
+            </div>
+            <pre class="code-display"><code id="code-block"><!-- Kode akan di-render di sini oleh JS --></code></pre>
+        </div>
+
+        <!-- Area Input Solusi -->
+        <div class="action-container">
+            <div class="input-group">
+                <label for="user-solution">Tulis Baris Kode yang Benar di Sini:</label>
+                <input type="text" id="user-solution" placeholder="Contoh: <img src='gambar.png'>" autocomplete="off">
+            </div>
+            <button id="submit-btn" class="btn-primary">Kirim Jawaban 🚀</button>
+        </div>
+
+        <!-- Kotak Feedback Jawaban -->
+        <div id="feedback-message" class="feedback hidden"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
